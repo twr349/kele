@@ -1,4 +1,3 @@
-
 module Roadmap
     
     def get_roadmap(roadmap_id)

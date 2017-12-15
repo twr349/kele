@@ -2,11 +2,12 @@ require 'httparty'
 require 'rubygems' 
 require 'json'
 require_relative 'kele/roadmap'
+require_relative 'kele/messages'
 
 class Kele
     include HTTParty
     include Roadmap
-    #format :json
+    include Messages
     
     #@cred = credentials, email & password
     
@@ -30,18 +31,6 @@ class Kele
         puts mentor_availability
     end
     
-    #def get_roadmap(roadmap_id)
-        #roadmap_id =>38
-     #   response = self.class.get("https://www.bloc.io/api/v1/roadmaps/#{roadmap_id}", headers: { "authorization" => @auth_token })
-      #  roadmap = JSON.parse(response.body)
-       # puts roadmap
-    #end
     
-    #def get_checkpoint(checkpoint_id)
-     #   response = self.class.get("https://www.bloc.io/api/v1/checkpoints/#{checkpoint_id}", headers: { "authorization" => @auth_token })
-      #  checkpoint = JSON.parse(response.body)
-       # puts checkpoint
-    #end
-
 
 end#end of ends
