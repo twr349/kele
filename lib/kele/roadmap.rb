@@ -8,6 +8,7 @@ module Roadmap
     end
     
     def get_checkpoint(checkpoint_id)
+        #checkpoint_id => 2556
         response = self.class.get("https://www.bloc.io/api/v1/checkpoints/#{checkpoint_id}", headers: { "authorization" => @auth_token })
         checkpoint = JSON.parse(response.body)
         puts checkpoint

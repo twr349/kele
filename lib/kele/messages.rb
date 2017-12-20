@@ -1,5 +1,3 @@
-
-
 module Messages
 
     def get_messages(page = 0)

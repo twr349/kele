@@ -3,11 +3,13 @@ require 'rubygems'
 require 'json'
 require_relative 'kele/roadmap'
 require_relative 'kele/messages'
+require_relative 'kele/submissions'
 
 class Kele
     include HTTParty
     include Roadmap
     include Messages
+    include Submissions
     
     #@cred = credentials, email & password
     
